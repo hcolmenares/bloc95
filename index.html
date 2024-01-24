@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bloc SPA</title>
+</head>
+
+<body onload="init()">
+
+    <div class="win-border medium-size" id="bloc">
+        <div id="bloc-header">
+            <h3 class="title">Bloc - SPA</h3>
+            <div class="options flex-div">
+                <div class="option-button flex-div win-border">_</div>
+                <div class="option-button flex-div win-border" onclick="changeSize()" id="sizeBtn">□</div>
+                <div class="option-button flex-div win-border" onclick="closeBloc()">X</div>
+            </div>
+        </div>
+        <div class="menu">
+            <!-- Menú -->
+
+            <ul class="menu-options flex-div">
+                <li class="menu-options_btn flex-div win-border" onclick="newFile()">Nuevo</li>
+                <li class="menu-options_btn flex-div win-border" onclick="uploadFile()">Abrir</li>
+                <li class="menu-options_btn flex-div win-border" onclick="handleSaveFile()">Guardar</li>
+                <li class="menu-options_btn flex-div win-border" onclick="infoBloc()">Ayuda</li>
+                <li class="menu-options_btn flex-div win-border">
+                    <a href="changelog.html" class="menu-link">Changelog</a>
+                </li>
+                <li class="menu-options_btn flex-div win-border" onclick="closeBloc()">Cerrar</li>
+            </ul>
+
+            <!-- Acciones -->
+
+            <!-- <ul class="menu-options flex-div">
+                <li class="menu-options_btn flex-div win-border" onclick="cmdBack()">
+                    <i class="bi bi-arrow-90deg-left"></i>
+                </li>
+                <li class="menu-options_btn flex-div win-border" onclick="cmdForward()">
+                    <i class="bi bi-arrow-90deg-right"></i>
+                </li>
+                <li class="menu-options_btn flex-div win-border">
+                    <i class="bi bi-pencil" onclick="penMode()"></i>
+                </li>
+                <li class="menu-options_btn flex-div win-border" onclick="eraserMode()">
+                    <i class="bi bi-eraser"></i>
+                </li>
+                <li class="menu-options_btn flex-div win-border">
+                    <i class="bi bi-droplet"></i>
+                </li>
+                <li class="menu-options_btn flex-div win-border" onclick="changePenSize()">
+                    <i class="bi bi-border-width"></i>
+                </li>
+            </ul> -->
+        </div>
+        <textarea id="editor" class="content win-border-alter"></textarea>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
